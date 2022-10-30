@@ -22,6 +22,13 @@ namespace test
         private List<PictureBox> Snake = new List<PictureBox>();
 
         Random random = new Random();
+        PictureBox newApple = new PictureBox
+        {
+            Size = new Size(30, 30),
+            Tag = "apple",
+            ImageLocation = @"C:\Users\dofus\Desktop\GameC#\test\test\picture\apple.png",
+            SizeMode = PictureBoxSizeMode.CenterImage
+        };
         int x, y;
        
         public Form1()
@@ -52,19 +59,12 @@ namespace test
             heightFrame = borderBox.ClientSize.Height;
             score = 0;
             speedAction = true;
-            speed = 3;
+            speed = 6;
             horizontale = Location.X;
             vertically = Location.Y;
         }
         private void GenerateFood()
         {
-            PictureBox newApple = new PictureBox
-            {
-                Size = new Size(30, 30),
-                Tag = "apple",
-                ImageLocation = @"C:\Users\dofus\Desktop\GameC#\test\test\picture\apple.png",
-                SizeMode = PictureBoxSizeMode.CenterImage
-            };
             x = random.Next(newApple.Width+5, widthFrame - newApple.Width);
             y = random.Next(newApple.Height+5, heightFrame - newApple.Height);
             newApple.Location = new Point(x,y);
@@ -216,7 +216,7 @@ namespace test
         }
         private void UpgradeSppedNextLvl()
         {
-            if(nextStep >= 15)
+            if(nextStep >= 45)
             {
                 speed *= 1;
                 nextStep = 0;
