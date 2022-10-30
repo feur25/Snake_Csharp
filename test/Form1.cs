@@ -11,7 +11,7 @@ namespace test
         private static int heightFrame { get; set; }
         private static int score { get; set; }
         private static bool speedAction { get; set; }
-        private static int speed { get; set; }
+        private int speed { get; set; }
         private static int horizontale { get; set; }
         private static int vertically { get; set; }
         private static int upGradePLayer { get; set; }
@@ -29,14 +29,18 @@ namespace test
             ImageLocation = @"..\..\..\picture\apple.png",
             SizeMode = PictureBoxSizeMode.CenterImage
         };
+
         int x, y;
        
-        public Form1()
+        public Form1(int speeding)
         {
             InitializeComponent();
             InitializeVariable();
             InitializeSnake();
+            GenerateFood();
             readTextBestRecords();
+
+            this.speed = speeding;
         }
         private void InitializeSnake()
         {
@@ -60,7 +64,6 @@ namespace test
             heightFrame = borderBox.ClientSize.Height;
             score = 0;
             speedAction = true;
-            speed = 6;
             horizontale = Location.X;
             vertically = Location.Y;
         }
@@ -272,6 +275,9 @@ namespace test
             writeTextBestRecords();
             timer1.Stop();
             MessageBox.Show("Game Over");
+            this.Hide();
+            homecs goToHome = new homecs();
+            goToHome.Show();
             return;
         }
     }

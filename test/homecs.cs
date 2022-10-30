@@ -22,5 +22,19 @@ namespace test
             var newSetting = new Settings();
             newSetting.Show();
         }
+
+        private void Normal_Click(object sender, EventArgs e)
+        {
+            Form1 form1 = new Form1(3);
+            form1.Show();
+            this.Close();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Form1 form1 = new Form1(8);
+            form1.Show();
+            this.Close();
+        }
     }
 }
