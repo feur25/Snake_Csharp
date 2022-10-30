@@ -22,10 +22,14 @@ namespace test
         private List<PictureBox> Snake = new List<PictureBox>();
 
         Random random = new Random();
+        List<Color> randomColorSnakeBody = new List<Color> { 
+            Color.Red, Color.Blue, Color.Brown, Color.CadetBlue, Color.Gold, Color.Coral, Color.DarkOrange, Color.DeepPink, Color.Lime, Color.LightYellow
+        };
         PictureBox newApple = new PictureBox
         {
             Size = new Size(28, 26),
             Tag = "apple",
+            //va dans le bin/Debug en l'occurence mes images ne sont pas la donc ce chemin est obligatoire
             ImageLocation = @"..\..\..\picture\apple.png",
             SizeMode = PictureBoxSizeMode.CenterImage
         };
@@ -133,7 +137,7 @@ namespace test
                 Location = new Point(Snake[Snake.Count - 1].Location.X, Snake[Snake.Count - 1].Location.Y),
                 Width = upGradePLayer,
                 Height = heightPlayer,
-                BackColor = Color.White
+                BackColor = randomColorSnakeBody[random.Next(0, 9)]
             };
             Snake.Add(Body);
             ShowingSnake();
