@@ -109,15 +109,6 @@ namespace test
             }
         }
 
-        private void pictureBox2_Click(object sender, EventArgs e)
-        {
-
-        }
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private bool speedUp(bool action)
         {
             if (action)
@@ -164,28 +155,6 @@ namespace test
                 this.Controls.Add(Snake[i]);
                 Snake[i].BringToFront();
             }
-        }
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void borderBox_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Form1_Paint(object sender, PaintEventArgs e)
-        {
-        }
-
-        private void Drawing(object sender, PaintEventArgs e)
-        {
         }
         private void FunctionCallImportant()
         {
@@ -237,15 +206,6 @@ namespace test
             }
             
         }
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBox1_MouseMove(object sender, MouseEventArgs e)
-        {
-
-        }
 
         private static void CheckDirectionAll(bool rightBool, bool leftBool, bool topBool, bool downBool)
         {
@@ -258,7 +218,7 @@ namespace test
         {
             if(nextStep >= 45)
             {
-                speed *= 1;
+                speed *= 2;
                 nextStep = 0;
             }
         }
@@ -292,6 +252,46 @@ namespace test
             homecs goToHome = new homecs();
             goToHome.Show();
             return;
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+
+        }
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void borderBox_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Form1_Paint(object sender, PaintEventArgs e)
+        {
+        }
+
+        private void Drawing(object sender, PaintEventArgs e)
+        {
+        }
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox1_MouseMove(object sender, MouseEventArgs e)
+        {
+
         }
     }
 }
