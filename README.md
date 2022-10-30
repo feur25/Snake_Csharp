@@ -10,3 +10,4 @@ Un fichier texte, nommé "counter.txt" dans le fichier "test", vous permettra de
 Un petit snake simple, j'ai vraiment essayé de rendre propre le code, même si on peut facilement faire mieux en matière de propreté.
 Dernier point à voir c'est le fait de mourir, mettre fin au jeu, soit le serpent mord sa queu, soit sa tete doit sortir, du cadre de jeu.
 (les méthodes vides sont justes, une fausse manipulation sur Windows formes que je ne suis pas encore retiré, n'impactant pas sur la jouabilité, ou aussi pouvant être complété par la suite, il n'était pas nécessaire de les retirer.)
+![image](https://user-images.githubusercontent.com/39668417/198896371-350df3ad-3e73-4b01-b674-9dc89c75592c.png)
