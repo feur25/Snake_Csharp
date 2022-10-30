@@ -62,7 +62,7 @@
             this.borderBox.BackColor = System.Drawing.Color.Bisque;
             this.borderBox.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("borderBox.BackgroundImage")));
             this.borderBox.Image = ((System.Drawing.Image)(resources.GetObject("borderBox.Image")));
-            this.borderBox.Location = new System.Drawing.Point(12, 28);
+            this.borderBox.Location = new System.Drawing.Point(12, 21);
             this.borderBox.Name = "borderBox";
             this.borderBox.Size = new System.Drawing.Size(449, 416);
             this.borderBox.TabIndex = 2;
@@ -120,6 +120,7 @@
             this.Load += new System.EventHandler(this.Form1_Load);
             this.Paint += new System.Windows.Forms.PaintEventHandler(this.Form1_Paint);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.KeyGetInput);
+            this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pictureBox1_MouseMove);
             ((System.ComponentModel.ISupportInitialize)(this.borderBox)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -24,14 +24,18 @@ namespace test
         Random random = new Random();
         PictureBox newApple = new PictureBox
         {
-            Size = new Size(30, 30),
+            Size = new Size(28, 26),
             Tag = "apple",
             ImageLocation = @"..\..\..\picture\apple.png",
             SizeMode = PictureBoxSizeMode.CenterImage
         };
 
         int x, y;
-       
+        PictureBox backgroundGenerate = new PictureBox
+        {
+            BackgroundImage = Image.FromFile(@"..\..\..\picture\background2.png")
+        };
+
         public Form1(int speeding)
         {
             InitializeComponent();
@@ -230,6 +234,11 @@ namespace test
             
         }
         private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox1_MouseMove(object sender, MouseEventArgs e)
         {
 
         }
