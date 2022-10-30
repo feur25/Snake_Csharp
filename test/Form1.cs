@@ -26,7 +26,7 @@ namespace test
         {
             Size = new Size(30, 30),
             Tag = "apple",
-            ImageLocation = @"C:\Users\dofus\Desktop\GameC#\test\test\picture\apple.png",
+            ImageLocation = @"..\..\..\picture\apple.png",
             SizeMode = PictureBoxSizeMode.CenterImage
         };
         int x, y;
@@ -36,6 +36,7 @@ namespace test
             InitializeComponent();
             InitializeVariable();
             InitializeSnake();
+            readTextBestRecords();
         }
         private void InitializeSnake()
         {
@@ -203,8 +204,31 @@ namespace test
                     Snake[i].Location = new Point(Snake[i - 1].Location.X, Snake[i - 1].Location.Y);
                 }
             }
-            label1.Text = "Score : " + score;
+            counter.Text = score.ToString();
             FunctionCallImportant();
+        }
+        private void readTextBestRecords()
+        {
+            string path = @"..\..\..\counter.txt";
+            StreamReader stream = new StreamReader(path);
+            string file = stream.ReadToEnd();
+            label2.Text = file.ToString();
+            stream.Close();
+        }
+        private void writeTextBestRecords()
+        {
+            if(int.Parse(label2.Text) < int.Parse(counter.Text))
+            {
+                string path = @"..\..\..\counter.txt";
+                StreamWriter fileWriter = new StreamWriter(path);
+                fileWriter.WriteLine(score);
+                fileWriter.Close();
+            }
+            
+        }
+        private void label2_Click(object sender, EventArgs e)
+        {
+
         }
 
         private static void CheckDirectionAll(bool rightBool, bool leftBool, bool topBool, bool downBool)
@@ -245,6 +269,7 @@ namespace test
         }
         private void gameOver()
         {
+            writeTextBestRecords();
             timer1.Stop();
             MessageBox.Show("Game Over");
             return;

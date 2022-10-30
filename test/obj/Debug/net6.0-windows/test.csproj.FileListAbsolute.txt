@@ -17,3 +17,6 @@ C:\Users\dofus\Desktop\GameC#\test\test\obj\Debug\net6.0-windows\test.genruntime
 C:\Users\dofus\Desktop\GameC#\test\test\obj\Debug\net6.0-windows\ref\test.dll
 C:\Users\dofus\Desktop\GameC#\test\test\obj\Debug\net6.0-windows\test.Properties.Resources.resources
 C:\Users\dofus\Desktop\GameC#\test\test\obj\Debug\net6.0-windows\test.Code.Form1.resources
+C:\Users\dofus\Desktop\GameC#\test\test\obj\Debug\net6.0-windows\test.setting.resources
+C:\Users\dofus\Desktop\GameC#\test\test\obj\Debug\net6.0-windows\test.Settings.resources
+C:\Users\dofus\Desktop\GameC#\test\test\obj\Debug\net6.0-windows\test.homecs.resources

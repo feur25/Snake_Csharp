@@ -33,6 +33,9 @@
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.label1 = new System.Windows.Forms.Label();
             this.borderBox = new System.Windows.Forms.PictureBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.counter = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.borderBox)).BeginInit();
             this.SuspendLayout();
             // 
@@ -47,11 +50,11 @@
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(572, 9);
+            this.label1.Location = new System.Drawing.Point(531, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(219, 65);
+            this.label1.Size = new System.Drawing.Size(191, 65);
             this.label1.TabIndex = 1;
-            this.label1.Text = "Score : 0";
+            this.label1.Text = "Score : ";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // borderBox
@@ -59,7 +62,7 @@
             this.borderBox.BackColor = System.Drawing.Color.Bisque;
             this.borderBox.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("borderBox.BackgroundImage")));
             this.borderBox.Image = ((System.Drawing.Image)(resources.GetObject("borderBox.Image")));
-            this.borderBox.Location = new System.Drawing.Point(40, 32);
+            this.borderBox.Location = new System.Drawing.Point(12, 28);
             this.borderBox.Name = "borderBox";
             this.borderBox.Size = new System.Drawing.Size(449, 416);
             this.borderBox.TabIndex = 2;
@@ -67,12 +70,49 @@
             this.borderBox.Click += new System.EventHandler(this.borderBox_Click);
             this.borderBox.Paint += new System.Windows.Forms.PaintEventHandler(this.Drawing);
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label2.Location = new System.Drawing.Point(750, 112);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(56, 65);
+            this.label2.TabIndex = 3;
+            this.label2.Text = "0";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.label3.Font = new System.Drawing.Font("Segoe UI", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label3.Location = new System.Drawing.Point(467, 112);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(288, 65);
+            this.label3.TabIndex = 4;
+            this.label3.Text = "Best Score :";
+            // 
+            // counter
+            // 
+            this.counter.AutoSize = true;
+            this.counter.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.counter.Font = new System.Drawing.Font("Segoe UI", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.counter.Location = new System.Drawing.Point(719, 9);
+            this.counter.Name = "counter";
+            this.counter.Size = new System.Drawing.Size(56, 65);
+            this.counter.TabIndex = 5;
+            this.counter.Text = "0";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::test.Properties.Resources.background2;
-            this.ClientSize = new System.Drawing.Size(801, 470);
+            this.ClientSize = new System.Drawing.Size(838, 470);
+            this.Controls.Add(this.counter);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.borderBox);
             this.Name = "Form1";
@@ -90,5 +130,8 @@
         private System.Windows.Forms.Timer timer1;
         private Label label1;
         private PictureBox borderBox;
+        private Label label2;
+        private Label label3;
+        private Label counter;
     }
 }
